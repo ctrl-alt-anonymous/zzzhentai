@@ -1,0 +1,227 @@
+/* ==========================================================
+   Drawer Toggle
+========================================================== */
+
+#drawerToggle{
+
+    position:fixed;
+
+    top:50%;
+    right:0;
+
+    transform:translateY(-50%);
+
+    width:42px;
+    height:90px;
+
+    background:white;
+
+    color:black;
+
+    border-radius:10px 0 0 10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    z-index:300;
+
+}
+
+/* ==========================================================
+   Drawer
+========================================================== */
+
+#drawer{
+
+    position:fixed;
+
+    top:70px;
+    right:-33vw;
+
+    width:33vw;
+    height:calc(100vh - 70px);
+
+    display:flex;
+    flex-direction:column;
+
+    background:#1d1d1d;
+
+    border-left:1px solid #333;
+
+    transition:right .35s ease;
+
+    z-index:250;
+
+}
+
+#drawer.open{
+
+    right:0;
+
+}
+
+.drawer-header{
+
+    padding:18px;
+
+    border-bottom:1px solid #333;
+
+    background:#181818;
+
+}
+
+.drawer-header h2{
+
+    font-size:20px;
+
+}
+
+/* ==========================================================
+   Scroller
+========================================================== */
+
+#tileScroller{
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    scrollbar-width:none;
+
+}
+
+#tileScroller::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ==========================================================
+   Grid
+========================================================== */
+
+#tileGrid{
+
+    padding:16px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+    align-content:start;
+
+}
+
+/* ==========================================================
+   Tiles
+========================================================== */
+
+.tile{
+
+    background:#2a2a2a;
+
+    border:1px solid #444;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.tile:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#777;
+
+    background:#333;
+
+}
+
+.tile-image{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:268 / 473;
+
+    object-fit:contain;
+
+    background:#111;
+
+}
+
+.tile-title{
+
+    padding:12px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width:768px){
+
+    #drawer{
+
+        width:100vw;
+        right:-100vw;
+
+    }
+
+    #drawer.open{
+
+        right:0;
+
+    }
+
+    body.drawer-open #content{
+
+        display:none;
+
+    }
+
+    #tileGrid{
+
+        grid-template-columns:repeat(3,1fr);
+
+        padding:12px;
+
+        gap:12px;
+
+    }
+
+    #drawerToggle{
+
+        width:55px;
+        height:100px;
+
+        font-size:34px;
+
+    }
+
+}

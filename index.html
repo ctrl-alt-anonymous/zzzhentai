@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="drawer.css">
+</head>
+<body>
+
+    <!-- ===========================
+         Intro Video
+    ============================ -->
+
+    <div id="intro">
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="intro.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- ===========================
+         Navigation
+    ============================ -->
+
+    <header class="navbar">
+
+        <button class="logo-btn" onclick="window.location.href='index.html'">
+            <img src="Logo/rectangle-logo.svg" alt="Logo">
+        </button>
+
+
+    </header>
+
+    <!-- ===========================
+         Main Content
+    ============================ -->
+
+    <main id="content">
+
+        <section class="hero">
+            <h1>Welcome</h1>
+            <p>Your content starts here.</p>
+        </section>
+
+    </main>
+
+    <!-- ===========================
+         Expandable Right Drawer
+    ============================ -->
+
+    <div id="drawerToggle">&#10094;</div>
+
+    <aside id="drawer">
+
+        <div class="drawer-header">
+            <h2>Library</h2>
+        </div>
+
+        <div id="tileScroller">
+
+            <div id="tileGrid">
+                <!-- drawer.js fills this -->
+            </div>
+
+        </div>
+
+    </aside>
+
+    <script src="index.js"></script>
+    <script src="drawer.js"></script>
+
+</body>
+</html>

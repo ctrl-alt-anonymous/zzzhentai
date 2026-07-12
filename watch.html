@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Watch</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="drawer.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <button class="logo-btn" onclick="window.location.href='index.html'">
+
+        <img src="Logo/rectangle-logo.svg" alt="Logo">
+
+    </button>
+
+</header>
+
+<main id="watchPage">
+
+    <h1 id="mediaTitle">
+        Loading...
+    </h1>
+
+    <div id="playerContainer">
+        <!-- Video or image inserted here -->
+    </div>
+
+</main>
+
+<!-- ==========================
+     Drawer
+========================== -->
+
+<div id="drawerToggle">
+    &#10094;
+</div>
+
+<aside id="drawer">
+
+    <div class="drawer-header">
+
+        <h2>Library</h2>
+
+    </div>
+
+    <div id="tileScroller">
+
+        <div id="tileGrid">
+            <!-- Filled by drawer.js -->
+        </div>
+
+    </div>
+
+</aside>
+
+<script src="watch.js"></script>
+<script src="drawer.js"></script>
+
+</body>
+
+</html>
